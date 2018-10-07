@@ -1,5 +1,5 @@
 from sys import argv
-import bottel
+import bottle
 from bottle import *
 bottle.debug(True)
 
