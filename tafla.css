@@ -1,0 +1,13 @@
+
+table {
+
+	float: left;
+}
+table, th , td {
+		border:1px solid black;
+}
+
+
+table, td{
+	background-color: lightblue;
+}
