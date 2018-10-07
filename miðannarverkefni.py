@@ -1,3 +1,8 @@
+from sys import argv
+import bottel
+from bottle import *
+bottle.debug(True)
+
 import json
 from bottle import route, run , template, static_file
 import requests
@@ -72,7 +77,7 @@ def server_static(filename):
     return static_file(filename, root='./')
 
 
+bottle.run(host='0.0.0.0', port=argv[1])
 
-run(host="localhost", port=8080, debug=True)
 
 
