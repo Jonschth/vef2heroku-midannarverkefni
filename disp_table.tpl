@@ -1,37 +1,43 @@
-<link  type="text/css" href="/static/tafla.css" rel="stylesheet">
-<h1> Bensíntafla </h1>
+<link  type="text/css" href="/static/tafla_f.css" rel="stylesheet">
+<h1> Yfirlit yfir söluaðila </h1>
 <p> Dagsetning uppfærslu {{!dagsetning}} </p>
+
 
 <table>
 	<tr>
-			<th>Félag </th><th>Stöð</th><th>Verð á bensíni</th>
+		<th>
+			Söluaðilar
+		</th>
 	</tr>
-	%for r in rows_1:
+
+	%for company in sa:
 		<tr>
-				<td>{{rows_1[r][0]}}</td>
-				<td>{{r}}</td>
-				<td>{{rows_1[r][1]}}</td>
+			<td>
+				{{company}}
+			</td>
 		</tr>
 	%end
+
 </table>
-
-
-
-
-<table border="2" style="float: left;">
-	<tr>
-			<th>Félag </th><th>Stöð</th><th>Verð á dísel</th>
-	</tr>
 	
 
-			%for r in rows_2:
-				<tr>
-				<td>{{rows_2[r][0]}}</td>
-				<td>{{r}}</td>
-				<td>{{rows_2[r][1]}}</td>
-				</tr>	
+<h1>
+	Ódírasta bensínið og díselið er:
+</h1>
+	<table>
+		<tr>
+			%for r in besta:
+			<tr>
+					<td>{{besta[r][0]}}</td>
+					<td>{{r}}</td>
+					<td>{{besta[r][1]}}</td>
+			</tr>
 			%end
-			
+		</tr>
 	</table>
+
+</h1>
+
+
 
 </html>
