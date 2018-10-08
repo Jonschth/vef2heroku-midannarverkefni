@@ -127,7 +127,7 @@ def server_static(filename):
     return static_file(filename, root='./')
 
 
-run(host="localhost", port=8080, debug=True)
+bottle.run(host='0.0.0.0', port=argv[1])
 
 
 
